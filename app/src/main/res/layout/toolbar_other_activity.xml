@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/basicColor"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlHomeToolbarItemId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/otherToolbarPadding"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/ivOtherToolbarBackIconId"
+            android:layout_width="@dimen/backIconSize"
+            android:layout_height="@dimen/backIconSize"
+            android:layout_marginLeft="@dimen/ToolbarbackIconMarginLeft"
+            android:src="@drawable/ic_double_back" />
+
+        <TextView
+            android:id="@+id/tvOtherToolbarTitleId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/otherToolbarTitleMarginLeft"
+            android:layout_toRightOf="@id/ivOtherToolbarBackIconId"
+            android:text="Robindra Nath Tagore"
+            android:textColor="@color/whiteColor"
+            android:textSize="@dimen/ToolbarTitleTextSize" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">BanglaQuotes</string>
+    <string name="love">LOVE</string>
+    <string name="search_catagory">Search Catagory</string>
+    <string name="sample_quotes">স্বপ্নময়  রজনী  ভালোবাসার  ভরপুর  সৃজনী ,ঊষার  উঁকিঝুঁকি  ঘুমভাঙা  চোখে  আঁকিবুকি ,প্রভাতের  উষ্ণ  আলোড়ন  তোমার  বিচরণ ,মনপ্রাণ  চঞ্চল  আমার  হৃদয়  দুর্বল। পাশ ফিরে ভাবি</string>
+    <string name="no_fav_msg">List Is Empty</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="feedbackmsg">Send Your Valuable Feedback</string>
+    <string name="feedback_title">Feedback</string>
+    <string name="author_name">Robindranath Tagore</string>
+    <string name="author_details">\"শহিদুল্লাহ, রুদ্র মুহম্মদ (১৯৫৬-১৯৯১)  কবি। জন্ম বরিশালে, ১৯৫৬ সালের ১৬ অক্টোবর। পৈতৃক নিবাস বাগেরহাট জেলার মংলা থানার অন্তর্গত সাহেবের মেঠ গ্রাম। তাঁর প্রকৃত নাম শেখ মোহাম্মদ শহীদুল্লাহ; ‘রুদ্র মুহম্মদ শহিদুল্লাহ’ নামটি তিনি নিজে গ্রহণ করেন। মা শিরিয়া বেগম, পিতা শেখ ওয়ালীউল্লাহ। শেখ ওয়ালীউল্লাহ ছিলেন একজন চিকিৎসক।   রুদ্র মুহম্মদ শহিদল্লাহ রুদ্র মুহম্মদ শহিদুল্লাহ ঢাকা ওয়েস্ট অ্যান্ড হাই স্কুল থেকে এসএসসি (১৯৭৪), ঢাকা কলেজ থেকে এইচ এসসি (১৯৭৬) এবং ঢাকা বিশ্ববিদ্যালয় থেকে ১৯৮০ সালে বিএ অনার্স (বাংলা)  ও ১৯৮৩ সালে এম এ পাস করেন। ছাত্রজীবনেই তাঁর দুটি কাব্য—উপদ্রুত উপকূল (১৯৭৯) ও ফিরে চাই স্বর্ণগ্রাম (১৯৮১) প্রকাশিত হয়। এ কাব্য দুটি তাঁকে কবিখ্যাতি এনে দেয়। তিনি যে তাঁর কালের সংস্কৃতিকে গভীরভাবে পর্যবেক্ষণ করেছেন, উক্ত কাব্য দুটিতে তার প্রতিফলন লক্ষ করা যায়। তাঁর কবিতায় বৈষম্যহীন সমাজ প্রতিষ্ঠার আকাঙ্ক্ষা প্রতিফলিত হয়েছে। ফলে সত্তরের দশকেই তিনি একজন শক্তিমান কবি হিসেবে পরিচিতি লাভ করেন। সমকালের সমাজ ও রাজনীতির অস্থিরতায় সৃষ্ট হতাশা, সঙ্কীর্ণতা এবং ক্ষমতার দ্বন্দ্ব ও সংঘাতময় জীবনের প্রতিচ্ছবি তাঁর কবিতায় লক্ষণীয়।  রুদ্র মুহম্মদ শহিদুল্লাহ ইতিহাস-সচেতন কবি। ‘বাতাসে লাশের গন্ধ’ কবিতায় তিনি যখন বলেন: ‘আজো আমি বাতাসে লাশের গন্ধ পাই,/আজো আমি মাটিতে মৃত্যুর নগ্ননৃত্য দেখি,/ধর্ষিতার কাতর চিৎকার শুনি আজো আমি তন্দ্রার ভেতরে—/এ—দেশ কি ভুলে গেছে সেই দুঃস্বপ্নের রাত, সেই রক্তাক্ত সময়?’ তখন তাঁর কবিস্বরূপ আপনাতেই ধরা পড়ে। তাঁর এ সংগ্রামী চেতনা পাঠককে বর্তমানের নৈরাশ্য থেকে আশান্বিত করে তোলে ভবিষ্যতের দিকে। তাঁর মানুষের মানচিত্র (১৯৮৪) কাব্যগ্রন্থে লক্ষ করা যায় এরকম আকাঙ্ক্ষার সৃদুঢ় অভিব্যক্তি। যেমন—‘তোমার অরণ্যে আছে অপরূপ স্বপ্ন-অাঁকা চিতল হরিণ।/তন্দ্রাতুল হড়িয়াল-ডাকা ফাল্গুনের রাত। শাদা খরগোশ।/তোমার কিনারে আছে পাললিক নোনাজল, জলের পরশ,/সরল শিশিরে ধোয়া সোনালিম শস্যময় হেমন্তের দিন।’  রুদ্র মুহম্মদ শহিদুল্লাহর অন্যান্য কাব্যগ্রন্থের মধ্যে ছোবল (১৯৮৬), গল্প (১৯৮৭), দিয়েছিলে সকল আকাশ (১৯৮৮), মৌলিক মুখোশ (১৯৯০) ও একগ্লাস অন্ধকার (১৯৯২) উলে­খযোগ্য। তিনি প্রধানত কবি হলেও কাব্যচর্চার পাশাপাশি সঙ্গীত, নাটক, ছোটগল্প এবং প্রবন্ধ রচনাতেও সমান উৎসাহী ছিলেন। তাঁর সাহিত্য-সাধনা ছিল দেশ, মানুষ ও মনুষ্যত্বের প্রতি অঙ্গীকারাবদ্ধ।  সাহিত্য-সাধনার স্বীকৃতিস্বরূপ ১৯৮০ সালে তিনি ‘মুনীর চৌধুরী স্মৃতিপুরস্কার’ লাভ করেন। ১৯৯১ সালের ২১ জুন ঢাকায় তাঁর মৃত্যু হয়</string>
+
+    <string-array name="catagoryList">
+        <item>নির্মলেন্দু গুণ</item>
+        <item>রুদ্র মুহম্মদ শহীদুল্লাহ </item>
+        <item>লালন শাহ</item>
+        <item>সুফিয়া কামাল</item>
+        <item>সক্রেটিস</item>
+        <item>অ্যালবার্ট আইনস্টাইন</item>
+        <item>এরিস্টটল</item>
+        <item>ডেল ক্যার্নেগি</item>
+        <item>আডলফ হিটলার</item>
+        <item>উইলিয়াম শেক্সপিয়র</item>
+        <item>নেলসন ম্যান্ডেলা</item>
+        <item>মাদার তেরেসা</item>
+        <item>লুৎফর রহমান</item>
+        <item>রেদোয়ান মাসুদ</item>
+    </string-array>
+
+    <string name="NIRMOLENDU_GOON">NIRMOLENDU_GOON</string>
+    <string name="RUDRA_MOHAMMAD_SHAHIDULLAH">RUDRA_MOHAMMAD_SHAHIDULLAH</string>
+    <string name="LALON">LALON</string>
+    <string name="SUFIA_KAMAL">SUFIA_KAMAL</string>
+    <string name="SOCRATES">SOCRATES</string>
+    <string name="ALBERT_EINSTEIN">ALBERT_EINSTEIN</string>
+    <string name="ARISTOTLE">ARISTOTLE</string>
+    <string name="DALE_CARNEGIE">DALE_CARNEGIE</string>
+    <string name="ADOLF_HITLER">ADOLF_HITLER</string>
+    <string name="WILLIAM_SHAKESPEARE">WILLIAM_SHAKESPEARE</string>
+    <string name="NELSON_MANDELA">NELSON_MANDELA</string>
+    <string name="MOTHER_TERESA">MOTHER_TERESA</string>
+    <string name="LUTFOR_RAHMAN">LUTFOR_RAHMAN</string>
+    <string name="REDWAN_MASUD">REDWAN_MASUD</string>
+    <string name="full_app_name">Quotes App</string>
+
+    <!--AdMob Ads IDs-->
+    <string name="admob_ad_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="industrial_ad_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="banner_ad_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="favourite">Favourite</string>
+    <string name="privacy">Privacy</string>
+    <string name="exit_alert">Exit !</string>
+    <string name="exit_alert_are_you_sure">Are You Sure ?</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="shareButtonText">অন্যান্য অ্যাপ্লিকেশনের মাধ্যমে শেয়ার করুন</string>
+
+
+</resources>
