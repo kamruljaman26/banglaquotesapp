@@ -33,5 +33,5 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/admob_ad_id" />
     </application>
-
+<!--https://www.privacypolicygenerator.info/live.php?token=iRPQ6DqRLn0eK87vkKsxkMZUldRQTGB7-->
 </manifest>

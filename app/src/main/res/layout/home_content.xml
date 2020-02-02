@@ -19,13 +19,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="invisible">
-
         </WebView>
 
         <androidx.viewpager.widget.ViewPager
+            android:layout_marginTop="12dp"
             android:id="@+id/vpHome"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/homeQuotesAreaSize"></androidx.viewpager.widget.ViewPager>
+            android:layout_height="@dimen/homeQuotesAreaSize">
+
+        </androidx.viewpager.widget.ViewPager>
 
         <LinearLayout
             android:id="@+id/linLayHomeDotsId"
@@ -34,7 +36,9 @@
             android:layout_marginLeft="@dimen/homeDotLayoutMarginLeft"
             android:layout_marginRight="@dimen/homeDotLayoutMarginRight"
             android:gravity="center"
-            android:orientation="horizontal"></LinearLayout>
+            android:orientation="horizontal">
+
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvHomeCatagory"

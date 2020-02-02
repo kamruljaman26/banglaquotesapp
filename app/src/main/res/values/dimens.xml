@@ -2,10 +2,10 @@
 <resources>
     <dimen name="noMessageTextSize">20sp</dimen>
     <dimen name="author_Image_height">200dp</dimen>
-    <dimen name="author_image_margin_top">10dp</dimen>
+    <dimen name="author_image_margin_top">24dp</dimen>
     <dimen name="author_image_margin_left">24dp</dimen>
     <dimen name="author_image_margin_right">24dp</dimen>
-    <dimen name="author_name_text_size">20sp</dimen>
+    <dimen name="author_name_text_size">24sp</dimen>
     <dimen name="author_text_margin_top">10dp</dimen>
     <dimen name="author_text_margin_left">24dp</dimen>
     <dimen name="author_text_margin_right">24dp</dimen>
@@ -47,8 +47,8 @@
     <dimen name="homeToolbarMenuIconSize">24dp</dimen>
     <dimen name="homeToolbarMenuIconMarginLeft">10dp</dimen>
     <dimen name="ToolbarTitleTextSize">18sp</dimen>
-    <dimen name="homeToolbarFavIconSize">22dp</dimen>
-    <dimen name="homeToolbarFavIconMarginRight">10dp</dimen>
+    <dimen name="homeToolbarFavIconSize">24dp</dimen>
+    <dimen name="homeToolbarFavIconMarginRight">16dp</dimen>
     <dimen name="homeToolbarSearchIconSize">22dp</dimen>
     <dimen name="homeToolbarSearchIconMarginRight">10dp</dimen>
     <dimen name="homeQuotesCardMarginLeft">12dp</dimen>
@@ -59,7 +59,7 @@
     <dimen name="homeQuotesLayHeight">200dp</dimen>
     <dimen name="HomeQuotesLayBottomHeight">50dp</dimen>
     <dimen name="quotesCardMarginLeft">24dp</dimen>
-    <dimen name="quotesCardMarginTop">8dp</dimen>
+    <dimen name="quotesCardMarginTop">24dp</dimen>
     <dimen name="quotesCardMarginRight">24dp</dimen>
     <dimen name="quotesCardCornerRadious">10dp</dimen>
     <dimen name="quotesCardElevation">2dp</dimen>
@@ -77,7 +77,7 @@
     <dimen name="dialogIconSize">24dp</dimen>
     <dimen name="exitAlertMarginLeft">10dp</dimen>
     <dimen name="exitAlertTextSize">24sp</dimen>
-    <dimen name="exitdialogTextSize">16sp</dimen>
+    <dimen name="exitdialogTextSize">18sp</dimen>
     <dimen name="confirming_Dialog_marginTop">5dp</dimen>
     <dimen name="dialogNoMarginRight">30dp</dimen>
     <dimen name="dialogNoMarginLeft">20dp</dimen>

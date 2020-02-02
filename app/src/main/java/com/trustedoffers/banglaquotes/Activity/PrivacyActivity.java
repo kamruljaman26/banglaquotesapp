@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -43,6 +44,11 @@ public class PrivacyActivity extends AppCompatActivity implements View.OnClickLi
         interstitialAd.loadAd(new AdRequest.Builder().build());
         //Toolbar
         toolbar();
+
+        //WebView Load Privacy Policy
+        WebView webView = findViewById(R.id.web_view_id);
+        webView.getSettings().getJavaScriptEnabled();
+        webView.loadUrl("https://www.privacypolicygenerator.info/live.php?token=iRPQ6DqRLn0eK87vkKsxkMZUldRQTGB7");
     }
 
     private void toolbar() {

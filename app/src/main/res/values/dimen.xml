@@ -6,7 +6,7 @@
     <dimen name="quotesCatagoryPadding">12dp</dimen>
     <dimen name="catagoryIconSize">100dp</dimen>
     <dimen name="catagoryNameMarginLeft">5dp</dimen>
-    <dimen name="catagoryTextSize">14sp</dimen>
+    <dimen name="catagoryTextSize">15sp</dimen>
     <dimen name="catagoryArrowIcon">18dp</dimen>
     <dimen name="catagoryCardElevation">3dp</dimen>
     <dimen name="catagoryCardRadious">10dp</dimen>
@@ -14,10 +14,10 @@
     <dimen name="catagoryCardMarginLeft">12dp</dimen>
     <dimen name="catagoryCardMarginRight">12dp</dimen>
     <dimen name="catagoryCardMarginTop">10dp</dimen>
-    <dimen name="catagoryCardImagePadding">10dp</dimen>
+    <dimen name="catagoryCardImagePadding">5dp</dimen>
     <dimen name="messageTextPadding">10dp</dimen>
 
-    <dimen name="quotesTextSize">14sp</dimen>
+    <dimen name="quotesTextSize">16sp</dimen>
     <dimen name="drawerTitleTextSize">20sp</dimen>
 
     <dimen name="homeQuotesAreaSize">270dp</dimen>

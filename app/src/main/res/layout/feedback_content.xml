@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="@dimen/feedbackBoxPadding">
@@ -49,7 +49,7 @@
             <EditText
                 android:id="@+id/feedback_edtxt_id"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:backgroundTint="@color/whiteColor"
                 android:gravity="start"
                 android:lines="10"
@@ -57,7 +57,7 @@
                 android:textCursorDrawable="@color/basicColor"
 
                 />
-        </LinearLayout>
+        </ScrollView>
     </androidx.cardview.widget.CardView>
 
     <Button
@@ -69,6 +69,8 @@
         android:layout_marginEnd="@dimen/feedbackMarginEnd"
         android:background="@color/basicColor"
         android:text="Sent"
+        android:textStyle="bold"
+        android:textSize="14sp"
         android:textColor="@color/whiteColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

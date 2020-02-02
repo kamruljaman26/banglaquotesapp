@@ -149,6 +149,7 @@
                 android:padding="10dp">
 
                 <ImageView
+                    android:padding="1.5dp"
                     android:layout_width="@dimen/drawer_icon_size"
                     android:layout_height="@dimen/drawer_icon_size"
                     android:layout_gravity="center"

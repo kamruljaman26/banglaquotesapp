@@ -113,6 +113,7 @@ public class HomeActivity extends AppCompatActivity implements ClickValuePass, V
         MobileAds.initialize(this, String.valueOf(R.string.admob_ad_id));
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
+
         //InterstitialAd Implimentation
         interstitialAd = new InterstitialAd(this);
         interstitialAd.setAdUnitId(getString(R.string.industrial_ad_id));
@@ -208,7 +209,6 @@ public class HomeActivity extends AppCompatActivity implements ClickValuePass, V
         catagoryNameAdapter = new CatagoryNameAdapter(this, catagoryList, clickValuePass);
         recyclerViewCatagory.setAdapter(catagoryNameAdapter);
         catagoryNameAdapter.notifyDataSetChanged();
-
     }
 
     private void setSharedPref(int clickCount) {
@@ -509,7 +509,7 @@ public class HomeActivity extends AppCompatActivity implements ClickValuePass, V
         tvNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Cancelled", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Cancelled", Toast.LENGTH_SHORT).show();
                 alertDialog.cancel();
             }
         });

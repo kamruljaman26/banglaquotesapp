@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         // SQL Database
         databaseHelper = new DatabaseHelper(this);
         SQLiteDatabase sqLiteDatabase = databaseHelper.getWritableDatabase();
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             Thread.sleep(3000);
             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
             startActivity(intent);
+            Thread.sleep(600);
             finish();
 
         } catch (InterruptedException e) {
@@ -100,6 +102,15 @@ public class MainActivity extends AppCompatActivity {
             } catch (Exception e) {
 
             }
+        }else {
+            Thread thread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    dowork();
+                }
+            });
+            thread.start();
         }
+
     }
 }
