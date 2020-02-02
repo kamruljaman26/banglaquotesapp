@@ -46,7 +46,7 @@
     <dimen name="quotesBottomPartPadding">10dp</dimen>
 
     <dimen name="drawer_icon_size">24dp</dimen>
-    <dimen name="drawer_title_padding">24dp</dimen>
-    <dimen name="drawer_logo_size">60dp</dimen>
+    <dimen name="drawer_title_padding">10dp</dimen>
+    <dimen name="drawer_logo_size">90dp</dimen>
 
 </resources>

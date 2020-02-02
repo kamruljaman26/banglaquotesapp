@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#4ECCA3</color>
-    <color name="colorPrimaryDark">#232931</color>
+    <color name="colorPrimaryDark">#393E46</color>
     <color name="colorAccent">#D81B60</color>
 
     <!-- Quotes APP -->

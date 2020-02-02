@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/ivHomeToolbarMenuIconId"
-            android:text="Quotes App For Learn"
+            android:text="বাংলা অনুপ্রেরণামূলক বানী"
             android:textColor="@color/whiteColor"
             android:textSize="@dimen/ToolbarTitleTextSize" />
 
