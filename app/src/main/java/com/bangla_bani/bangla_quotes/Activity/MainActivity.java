@@ -1,4 +1,4 @@
-package com.trustedoffers.banglaquotes.Activity;
+package com.bangla_bani.bangla_quotes.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,12 +7,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
-import com.trustedoffers.banglaquotes.Helper.DatabaseHelper;
-import com.trustedoffers.banglaquotes.Helper.SharedPref;
+import com.bangla_bani.bangla_quotes.Helper.DatabaseHelper;
+import com.bangla_bani.bangla_quotes.Helper.SharedPref;
 import com.trustedoffers.banglaquotes.R;
 
 import java.io.BufferedReader;

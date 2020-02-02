@@ -1,4 +1,4 @@
-package com.trustedoffers.banglaquotes.Adapter;
+package com.bangla_bani.bangla_quotes.Adapter;
 
 import android.annotation.SuppressLint;
 import android.content.ClipData;
@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,9 +18,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.trustedoffers.banglaquotes.Helper.DatabaseHelper;
-import com.trustedoffers.banglaquotes.Interface.ClickValuePass;
-import com.trustedoffers.banglaquotes.ModelClass.QuotesModelClass;
+import com.bangla_bani.bangla_quotes.Interface.ClickValuePass;
+import com.bangla_bani.bangla_quotes.ModelClass.QuotesModelClass;
+import com.bangla_bani.bangla_quotes.Helper.DatabaseHelper;
 import com.trustedoffers.banglaquotes.R;
 
 import java.util.ArrayList;

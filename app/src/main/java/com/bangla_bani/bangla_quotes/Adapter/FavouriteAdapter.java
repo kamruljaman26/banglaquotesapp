@@ -1,4 +1,4 @@
-package com.trustedoffers.banglaquotes.Adapter;
+package com.bangla_bani.bangla_quotes.Adapter;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -17,10 +17,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.trustedoffers.banglaquotes.Helper.DatabaseHelper;
-import com.trustedoffers.banglaquotes.Interface.ClickValuePass;
-import com.trustedoffers.banglaquotes.Interface.NoMessageShowListener;
-import com.trustedoffers.banglaquotes.ModelClass.QuotesModelClass;
+import com.bangla_bani.bangla_quotes.Interface.ClickValuePass;
+import com.bangla_bani.bangla_quotes.Interface.NoMessageShowListener;
+import com.bangla_bani.bangla_quotes.ModelClass.QuotesModelClass;
+import com.bangla_bani.bangla_quotes.Helper.DatabaseHelper;
 import com.trustedoffers.banglaquotes.R;
 
 import java.util.ArrayList;

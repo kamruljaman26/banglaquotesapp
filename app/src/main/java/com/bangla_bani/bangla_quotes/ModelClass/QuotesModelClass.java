@@ -1,4 +1,4 @@
-package com.trustedoffers.banglaquotes.ModelClass;
+package com.bangla_bani.bangla_quotes.ModelClass;
 
 import android.os.Parcel;
 import android.os.Parcelable;

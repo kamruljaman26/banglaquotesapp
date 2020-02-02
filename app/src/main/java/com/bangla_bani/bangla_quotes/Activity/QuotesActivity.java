@@ -1,4 +1,4 @@
-package com.trustedoffers.banglaquotes.Activity;
+package com.bangla_bani.bangla_quotes.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,37 +13,35 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bangla_bani.bangla_quotes.Interface.ClickValuePass;
+import com.bangla_bani.bangla_quotes.ModelClass.QuotesModelClass;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
-import com.trustedoffers.banglaquotes.Adapter.FavouriteAdapter;
-import com.trustedoffers.banglaquotes.Adapter.QuotesAdapter;
-import com.trustedoffers.banglaquotes.Helper.ConstantVariable;
-import com.trustedoffers.banglaquotes.Helper.DatabaseHelper;
-import com.trustedoffers.banglaquotes.Helper.SharedPref;
-import com.trustedoffers.banglaquotes.Interface.ClickValuePass;
-import com.trustedoffers.banglaquotes.Interface.NoMessageShowListener;
-import com.trustedoffers.banglaquotes.ModelClass.QuotesModelClass;
+import com.bangla_bani.bangla_quotes.Adapter.QuotesAdapter;
+import com.bangla_bani.bangla_quotes.Helper.ConstantVariable;
+import com.bangla_bani.bangla_quotes.Helper.DatabaseHelper;
+import com.bangla_bani.bangla_quotes.Helper.SharedPref;
 import com.trustedoffers.banglaquotes.R;
 
 import java.util.ArrayList;
 
-public class FavouriteActivity extends AppCompatActivity implements NoMessageShowListener, ClickValuePass {
+public class QuotesActivity extends AppCompatActivity implements ClickValuePass {
     //RecyclerView
     private RecyclerView recyclerView;
     //SQL Database
     private DatabaseHelper databaseHelper;
 
     private ArrayList<QuotesModelClass> datalist = new ArrayList<>();
-    private FavouriteAdapter adapter;
-    private NoMessageShowListener noMessageShowListener;
-    private TextView tvNoFavMessage;
+    private QuotesAdapter adapter;
     //Toolbar
-    private ImageView ivBack;
-    private TextView tvTitle;
-    //For Interface
+    private TextView tvTitleBarName;
+    private ImageView ivToolbarAuthor, ivBack;
+
+    private String quotesCatagory, quotesBanglaCatagory;
+    //Interface
     private ClickValuePass clickValuePass;
     //Ad
     private InterstitialAd interstitialAd;
@@ -52,11 +50,9 @@ public class FavouriteActivity extends AppCompatActivity implements NoMessageSho
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_favourite);
-        //Initilizing Id
+        setContentView(R.layout.activity_quotes);
+        //Initializing Id
         idFinder();
-        //Toolbar
-        toolbar();
         //Banner Ad
         MobileAds.initialize(this, String.valueOf(R.string.admob_ad_id));
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -66,34 +62,71 @@ public class FavouriteActivity extends AppCompatActivity implements NoMessageSho
         interstitialAd.setAdUnitId(getString(R.string.industrial_ad_id));
         interstitialAd.loadAd(new AdRequest.Builder().build());
         clickValuePass = (ClickValuePass) this;
-        //NoMessage Show Interface
-        noMessageShowListener = this;
+        //Getting Value From Intent
+        quotesCatagory = getIntent().getStringExtra("Catagory");
+        quotesBanglaCatagory = getIntent().getStringExtra("BanglaCatagory");
+        //SQL Database
         databaseHelper = new DatabaseHelper(this);
+        //Toolbar
+        toolbar();
         //recyclerView
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        //ReadingDataFromDatabase
+        //Reading DataFrom Database
         readData();
-
-
-    }
-
-    private void idFinder() {
-        recyclerView = findViewById(R.id.rvFavId);
-        tvNoFavMessage = findViewById(R.id.tvFavNoMessageId);
-        ivBack = findViewById(R.id.ivOtherToolbarBackIconId);
-        adView = findViewById(R.id.avBannerFavId);
-        tvTitle = findViewById(R.id.tvOtherToolbarTitleId);
     }
 
     private void toolbar() {
+        tvTitleBarName.setText(quotesBanglaCatagory);
+        ivToolbarAuthor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showAdAuthor();
+
+            }
+        });
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showAdBack();
             }
         });
-        tvTitle.setText(R.string.favourite);
+    }
+
+    private void showAdAuthor() {
+        SharedPreferences sharedPreferences = getSharedPreferences(SharedPref.AppPra, Context.MODE_PRIVATE);
+        int clickCount = sharedPreferences.getInt(String.valueOf(SharedPref.count), 0);
+        clickCount = clickCount + 1;
+        int constantClick = ConstantVariable.AdPerClick;
+        if (clickCount == constantClick) {
+            if (interstitialAd.isLoaded()) {
+                setSharedPref(0);
+                interstitialAd.show();
+                final int finalClickCount = clickCount;
+                interstitialAd.setAdListener(new AdListener() {
+                    @Override
+                    public void onAdClosed() {
+                        interstitialAd.loadAd(new AdRequest.Builder().build());
+                        Intent intent = new Intent(QuotesActivity.this, AuthorActivity.class);
+                        intent.putExtra("Catagory", quotesCatagory);
+                        intent.putExtra("BanglaCatagory", quotesBanglaCatagory);
+                        startActivity(intent);
+                    }
+                });
+            } else {
+                setSharedPref(0);
+                Intent intent = new Intent(QuotesActivity.this, AuthorActivity.class);
+                intent.putExtra("Catagory", quotesCatagory);
+                intent.putExtra("BanglaCatagory", quotesBanglaCatagory);
+                startActivity(intent);
+            }
+        } else {
+            setSharedPref(clickCount);
+            Intent intent = new Intent(QuotesActivity.this, AuthorActivity.class);
+            intent.putExtra("Catagory", quotesCatagory);
+            intent.putExtra("BanglaCatagory", quotesBanglaCatagory);
+            startActivity(intent);
+        }
     }
 
     private void showAdBack() {
@@ -105,29 +138,37 @@ public class FavouriteActivity extends AppCompatActivity implements NoMessageSho
             if (interstitialAd.isLoaded()) {
                 setSharedPref(0);
                 interstitialAd.show();
-
                 final int finalClickCount = clickCount;
                 interstitialAd.setAdListener(new AdListener() {
                     @Override
                     public void onAdClosed() {
                         interstitialAd.loadAd(new AdRequest.Builder().build());
-                        Intent intent = new Intent(FavouriteActivity.this, HomeActivity.class);
+                        Intent intent = new Intent(QuotesActivity.this, HomeActivity.class);
                         startActivity(intent);
                         finish();
                     }
                 });
             } else {
                 setSharedPref(0);
-                Intent intent = new Intent(FavouriteActivity.this, HomeActivity.class);
+
+                Intent intent = new Intent(QuotesActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
             }
         } else {
             setSharedPref(clickCount);
-            Intent intent = new Intent(FavouriteActivity.this, HomeActivity.class);
+            Intent intent = new Intent(QuotesActivity.this, HomeActivity.class);
             startActivity(intent);
             finish();
         }
+    }
+
+    private void idFinder() {
+        recyclerView = findViewById(R.id.rvQuotesId);
+        ivToolbarAuthor = findViewById(R.id.ivQuotesToolbarAuthorDetailsIconId);
+        ivBack = findViewById(R.id.ivQuotesToolbarBackIconId);
+        tvTitleBarName = findViewById(R.id.tvQuotesToolbarTitleId);
+        adView = findViewById(R.id.avBannerQuotesId);
     }
 
     private void readData() {
@@ -135,41 +176,26 @@ public class FavouriteActivity extends AppCompatActivity implements NoMessageSho
         if (cursor.getCount() == 0) {
             return;
         } else {
+
             while (cursor.moveToNext()) {
                 String id = cursor.getString(0);
                 String message = cursor.getString(1);
                 String catagory = cursor.getString(2);
                 String favourite = cursor.getString(3);
-                if (favourite.equals("true")) {
+                if (catagory.equals(quotesCatagory)) {
                     QuotesModelClass modelClass = new QuotesModelClass(id, message, catagory, favourite);
                     datalist.add(modelClass);
                 }
             }
-            adapter = new FavouriteAdapter(getApplicationContext(), datalist, clickValuePass, noMessageShowListener);
+            adapter = new QuotesAdapter(getApplicationContext(), datalist, clickValuePass);
             recyclerView.setAdapter(adapter);
             adapter.notifyDataSetChanged();
-            if (datalist.size() == 0) {
-                tvNoFavMessage.setVisibility(View.VISIBLE);
-            } else {
-                tvNoFavMessage.setVisibility(View.INVISIBLE);
-            }
-        }
-    }
-
-    @Override
-    public void noMessage(int num) {
-        if (num == 0) {
-            tvNoFavMessage.setVisibility(View.VISIBLE);
-        } else {
-            tvNoFavMessage.setVisibility(View.INVISIBLE);
         }
     }
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(FavouriteActivity.this, HomeActivity.class);
-        startActivity(intent);
-        finish();
+        showAdBack();
     }
 
     @Override

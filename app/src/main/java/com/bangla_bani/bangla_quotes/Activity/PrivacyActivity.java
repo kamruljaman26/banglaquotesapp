@@ -1,4 +1,4 @@
-package com.trustedoffers.banglaquotes.Activity;
+package com.bangla_bani.bangla_quotes.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,8 +16,8 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
-import com.trustedoffers.banglaquotes.Helper.ConstantVariable;
-import com.trustedoffers.banglaquotes.Helper.SharedPref;
+import com.bangla_bani.bangla_quotes.Helper.ConstantVariable;
+import com.bangla_bani.bangla_quotes.Helper.SharedPref;
 import com.trustedoffers.banglaquotes.R;
 
 public class PrivacyActivity extends AppCompatActivity implements View.OnClickListener {

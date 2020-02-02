@@ -1,4 +1,4 @@
-package com.trustedoffers.banglaquotes.Interface;
+package com.bangla_bani.bangla_quotes.Interface;
 
 public interface ClickValuePass {
     void ShowAd();

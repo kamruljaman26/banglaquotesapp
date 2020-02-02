@@ -45,9 +45,9 @@
     <string name="full_app_name">Quotes App</string>
 
     <!--AdMob Ads IDs-->
-    <string name="admob_ad_id">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="industrial_ad_id">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="banner_ad_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_ad_id">ca-app-pub-4364453159749180~2379797660</string>
+    <string name="industrial_ad_id">ca-app-pub-4364453159749180/7141169759</string>
+    <string name="banner_ad_id">ca-app-pub-4364453159749180/2603707681</string>
     <string name="favourite">Favourite</string>
     <string name="privacy">Privacy Policy</string>
     <string name="exit_alert">Exit !</string>

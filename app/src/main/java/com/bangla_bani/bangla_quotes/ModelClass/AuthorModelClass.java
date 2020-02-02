@@ -1,4 +1,4 @@
-package com.trustedoffers.banglaquotes.ModelClass;
+package com.bangla_bani.bangla_quotes.ModelClass;
 
 public class AuthorModelClass {
     private int image;

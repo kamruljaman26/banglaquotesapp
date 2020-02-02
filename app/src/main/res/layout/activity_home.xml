@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
     android:orientation="vertical"
-    tools:context=".Activity.HomeActivity"
+    tools:context="com.bangla_bani.bangla_quotes.Activity.HomeActivity"
     tools:openDrawer="start">
 
     <include

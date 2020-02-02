@@ -1,4 +1,4 @@
-package com.trustedoffers.banglaquotes.Adapter;
+package com.bangla_bani.bangla_quotes.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,9 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.trustedoffers.banglaquotes.Activity.QuotesActivity;
-import com.trustedoffers.banglaquotes.Interface.ClickValuePass;
-import com.trustedoffers.banglaquotes.ModelClass.CatagoryModelClass;
+import com.bangla_bani.bangla_quotes.Activity.QuotesActivity;
+import com.bangla_bani.bangla_quotes.Interface.ClickValuePass;
+import com.bangla_bani.bangla_quotes.ModelClass.CatagoryModelClass;
 import com.trustedoffers.banglaquotes.R;
 
 import java.util.ArrayList;

@@ -1,39 +1,49 @@
-package com.trustedoffers.banglaquotes.Activity;
+package com.bangla_bani.bangla_quotes.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bangla_bani.bangla_quotes.ModelClass.AuthorModelClass;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
-import com.trustedoffers.banglaquotes.Helper.ConstantVariable;
-import com.trustedoffers.banglaquotes.Helper.SharedPref;
+import com.bangla_bani.bangla_quotes.Helper.AuthorData;
+import com.bangla_bani.bangla_quotes.Helper.ConstantVariable;
+import com.bangla_bani.bangla_quotes.Helper.SharedPref;
 import com.trustedoffers.banglaquotes.R;
 
-public class FeedbackActivity extends AppCompatActivity {
-    private EditText feedbackTxt;
-    private Button sendFeedbackBn;
-    private TextView tvTitle;
-    private ImageView ivToolbarBack;
+import java.util.ArrayList;
+
+public class AuthorActivity extends AppCompatActivity {
+    //Toolbar
+    private ImageView ivBack;
+    private TextView tvTitleBarName;
+    private ImageView ivAuthor;
+
+    private String catagoryName, banglaCatagoryName;
+    private TextView tvAuthor, tvAuthorDetails;
+
+    private ArrayList<AuthorModelClass> listItem = new ArrayList<>();
+    //Ad
     private InterstitialAd interstitialAd;
     private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feedback);
-        //Variable Initiation
+        setContentView(R.layout.activity_author);
+        //Get Catagory Name From Intent
+        catagoryName = getIntent().getStringExtra("Catagory");
+        banglaCatagoryName = getIntent().getStringExtra("BanglaCatagory");
+        //Initialization Id
         idFinder();
         //Banner Ad
         MobileAds.initialize(this, String.valueOf(R.string.admob_ad_id));
@@ -43,36 +53,29 @@ public class FeedbackActivity extends AppCompatActivity {
         interstitialAd = new InterstitialAd(this);
         interstitialAd.setAdUnitId(getString(R.string.industrial_ad_id));
         interstitialAd.loadAd(new AdRequest.Builder().build());
-        //Send Feedback : Button Handler : Toolbar
-        toolBar();
-        //Feedback
-        sendFeedbackBn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                send();
+        //Toolbar
+        toolbar();
+        //Getting Author Data
+        AuthorData data=new AuthorData();
+        listItem=data.authorList;
+        for (AuthorModelClass modelClass : listItem) {
+            if (catagoryName.contains(modelClass.getName())) {
+                ivAuthor.setImageResource(modelClass.getImage());
+                tvAuthor.setText(banglaCatagoryName);
+                tvAuthorDetails.setText(modelClass.getLifeDetails());
             }
-        });
+        }
     }
 
-    private void idFinder() {
-        feedbackTxt = findViewById(R.id.feedback_edtxt_id);
-        sendFeedbackBn = findViewById(R.id.send_feedback_bn_id);
-        tvTitle = findViewById(R.id.tvOtherToolbarTitleId);
-        ivToolbarBack = findViewById(R.id.ivOtherToolbarBackIconId);
-        adView = findViewById(R.id.avBannerFeedbackId);
-    }
-
-    /**
-     * ToolBar Handler
-     */
-    private void toolBar() {
-        tvTitle.setText(getResources().getString(R.string.feedback_title));
-        ivToolbarBack.setOnClickListener(new View.OnClickListener() {
+    private void toolbar() {
+        ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showAdBack();
             }
         });
+        tvTitleBarName.setText(banglaCatagoryName);
+
     }
 
     private void showAdBack() {
@@ -90,27 +93,26 @@ public class FeedbackActivity extends AppCompatActivity {
                     @Override
                     public void onAdClosed() {
                         interstitialAd.loadAd(new AdRequest.Builder().build());
-                        Intent intent = new Intent(FeedbackActivity.this, HomeActivity.class);
-                        startActivity(intent);
                         finish();
-
                     }
                 });
             } else {
                 setSharedPref(0);
-
-                Intent intent = new Intent(FeedbackActivity.this, HomeActivity.class);
-                startActivity(intent);
                 finish();
             }
-
-
         } else {
             setSharedPref(clickCount);
-            Intent intent = new Intent(FeedbackActivity.this, HomeActivity.class);
-            startActivity(intent);
             finish();
         }
+    }
+
+    private void idFinder() {
+        ivBack = findViewById(R.id.ivOtherToolbarBackIconId);
+        ivAuthor = findViewById(R.id.ivAuthorAuthorImgId);
+        tvAuthor = findViewById(R.id.tvAuthorNameId);
+        tvAuthorDetails = findViewById(R.id.tvAuthorDetailsId);
+        tvTitleBarName = findViewById(R.id.tvOtherToolbarTitleId);
+        adView = findViewById(R.id.avBannerAuthorId);
     }
 
     private void setSharedPref(int clickCount) {
@@ -118,22 +120,6 @@ public class FeedbackActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(String.valueOf(SharedPref.count), clickCount);
         editor.apply();
-    }
-
-    /**
-     * Feedback Method : Send Using Email
-     */
-    private void send() {
-        String receiver = "kamrul.jaman26@gmail.com";
-        String[] recevername = receiver.split(",");
-        String subject = "Bangla Love SMS";
-        String message = feedbackTxt.getText().toString();
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.putExtra(Intent.EXTRA_EMAIL, recevername);
-        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
-        intent.putExtra(Intent.EXTRA_TEXT, message);
-        intent.setType("message/rfc822");
-        startActivity(Intent.createChooser(intent, "Choose App For Send"));
     }
 
     @Override

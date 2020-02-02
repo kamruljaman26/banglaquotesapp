@@ -1,4 +1,4 @@
-package com.trustedoffers.banglaquotes.Helper;
+package com.bangla_bani.bangla_quotes.Helper;
 
 
 import android.content.ContentValues;

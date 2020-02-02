@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.FeedbackActivity">
+    tools:context="com.bangla_bani.bangla_quotes.Activity.FeedbackActivity">
 
     <include
         layout="@layout/feedback_content"

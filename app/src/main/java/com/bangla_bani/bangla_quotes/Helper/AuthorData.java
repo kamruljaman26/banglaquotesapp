@@ -1,6 +1,6 @@
-package com.trustedoffers.banglaquotes.Helper;
+package com.bangla_bani.bangla_quotes.Helper;
 
-import com.trustedoffers.banglaquotes.ModelClass.AuthorModelClass;
+import com.bangla_bani.bangla_quotes.ModelClass.AuthorModelClass;
 import com.trustedoffers.banglaquotes.R;
 
 import java.util.ArrayList;

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.FavouriteActivity">
+    tools:context="com.bangla_bani.bangla_quotes.Activity.FavouriteActivity">
 
     <include
         layout="@layout/favourite_content"

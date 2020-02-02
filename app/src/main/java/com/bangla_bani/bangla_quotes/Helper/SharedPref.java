@@ -1,8 +1,4 @@
-package com.trustedoffers.banglaquotes.Helper;
-
-import com.trustedoffers.banglaquotes.ModelClass.AuthorModelClass;
-
-import java.util.ArrayList;
+package com.bangla_bani.bangla_quotes.Helper;
 
 public class SharedPref {
     public static final String AppPra = "com.trustedoffers.banglaquotes";
